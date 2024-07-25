@@ -1,0 +1,43 @@
+server:
+  port: 9090
+
+spring:
+  profiles:
+    active: dev
+
+  application:
+    name: blog-app-api
+
+  jpa:
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+
+  security:
+    user:
+      name: ameya
+      password: ameya
+      roles:
+      - ADMIN
+      - USER
+
+              
+project:
+  image: images/
+
+logging:
+  level:
+    org:
+      springwork:
+        security: DEBUG
+     
+        
+    
